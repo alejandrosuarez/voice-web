@@ -8,7 +8,8 @@
     "fluent-syntax": "^0.14.0",
     "http-status-codes": "^1.4.0",
     "request": "^2.88.0",
-    "request-promise-native": "^1.0.8"
+    "request-promise-native": "^1.0.8",
+    "@snyk/protect": "latest"
   },
   "devDependencies": {
     "concurrently": "^5.1.0",
@@ -40,11 +41,14 @@
     "prettier": "yarn lint --write",
     "start": "yarn build-common && concurrently -p \"[{name}]\" -n \"CO,BE,FE,MT\" -c \"bgYellow.bold,bgBlue.bold,bgMagenta.bold,bgCyan.bold\" \"cd common && yarn dev\" \"cd server && yarn start\" \"cd web && yarn dev\" \"cd maintenance && yarn dev\"",
     "start:prod": "yarn build-common && node server/js/main.js",
-    "test": "yarn build-common && concurrently --kill-others-on-fail \"cd web && yarn test\" \"cd server && yarn test\""
+    "test": "yarn build-common && concurrently --kill-others-on-fail \"cd web && yarn test\" \"cd server && yarn test\"",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "husky": {
     "hooks": {
       "pre-commit": "pretty-quick --staged"
     }
-  }
+  },
+  "snyk": true
 }
