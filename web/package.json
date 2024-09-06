@@ -18,7 +18,7 @@
     "@types/react-redux": "^7.1.1",
     "@types/react-router": "^5.1.2",
     "@types/react-router-dom": "^5.1.0",
-    "amplitude-js": "^5.10.0",
+    "amplitude-js": "^8.21.4",
     "audio-recorder-polyfill": "^0.3.6",
     "classnames": "^2.2.6",
     "downshift": "^3.2.10",
