@@ -22,7 +22,7 @@
     "aws-sdk": "^2.503.0",
     "body-parser": "^1.19.0",
     "common": "*",
-    "commonmark": "^0.29.0",
+    "commonmark": "^0.31.2",
     "cookie-parser": "^1.4.4",
     "crypto-js": "^3.1.9-1",
     "db-migrate": "^0.11.6",
